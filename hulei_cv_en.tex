@@ -10,7 +10,7 @@
 
 % moderncv themes
 %\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[green,roman]{classic}                % idem
+\moderncvtheme[black]{classic}                % idem
 
 % character encoding
 %\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
@@ -29,7 +29,7 @@
 \AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
 
 \newcommand*{\cvtitlelistitem}[3][\listitemsymbol{}]{%
-  \cvitem{#2}{#1~#3}}
+  \cvitem{#2}{#1#3}}
 
 \makeatletter
 \renewcommand*\bibliographyitemlabel{\@biblabel{\arabic{enumiv}}}
@@ -39,13 +39,13 @@
 \firstname{Lei}
 \familyname{Hu}
 \title{Resum\'{e}}               % optional, remove the line if not wanted
-\address{Rm 502, Bld 16, No 2, West Yu-Xin Garden Rd}{Haidian Dist, 100190 Beijing}    % optional, remove the line if not wanted
+\address{Rm 502, Bld 16, No 2, West Yu-Xin Garden Rd}{Haidian Dist, 100190 Beijing, China}    % optional, remove the line if not wanted
 \mobile{(86)13426468615}                    % optional, remove the line if not wanted
 %\phone{(86)01059846363}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{leonhardhu@gmail.com}                      % optional, remove the line if not wanted
-\extrainfo{Birth: 03/1987 ~~~~ Citizenship: Mainland China} % optional, remove the line if not wanted
-\photo[64pt]{photo_new}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\extrainfo{Birth: 03/1987 ~~~~ Citizenship: Mainland China} % optional, remove the line if not wanted
+%\photo[64pt]{photo_new}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 %\quote{Some quote (optional)}                 % optional, remove the line if not wanted
 
 \setlength{\hintscolumnwidth}{0.12\textwidth}
@@ -58,7 +58,7 @@
 \begin{document}
 \maketitle
 
-%\vspace*{-1.2em}
+\vspace*{-1em}
 \section{Education}
 \cventry{\bfseries 2006--2009}{Master}{Inst. of Computing Technology, Chinese Academy of Science}{Beijing}{China}{}%{\textbf{Major}: Computer Vision and Video Analysis \hfill \textbf{Average}: 80/100}
 \cventry{\bfseries 2002--2006}{Bachelor}{University of Science and Technology of China}{Hefei}{China}{}%{\textbf{Major}: Computer Science \hfill \textbf{Rank}: top 30\% ~ ~ \textbf{Average}: 81/100}  % arguments 3 to 6 are optional
@@ -70,31 +70,47 @@
 
 %\vspace*{-0.4em}
 \section{Career}
-\cventry{\bfseries 07/2009--}{Member of Technical Staff (MTS)}{VMware Inc.}{Beijing}{China}{}
-\cvitem{\bfseries Present}{As a MTS in QE team, I am in charge of the \textit{Kernel/API/Infrastructure Whitebox testing}. My responsibility mainly contains test specification design, as well as test automation design and implementation. \newline{} \hspace*{1em}In the past 3 years, I worked as the main contributor and test automation designer on 3 projects which are all delivered on time with decent quality and remarkable code coverage rates. By digging into the deep of test objective codes, I caught hundreds of bugs, and always give insightful opinions on the root cause and possible fixes. \newline{} \hspace*{1em}Through that, I built trust with Dev team and Palo Alto counterparts during those projects and contributed much to the establishment of our team's reputation. My first hand experiences also helped team and my colleagues on other sides. As one of the 2 gatekeepers, I established team's coding standard from scratch, formalized the internal review process, and continuously performed as the internal code reviewer on every team member's code in the past 1.5 years. I also designed and implemented a handy \textit{CUnit} based automation framework which was deemed as the standard automation framework on API/Infrastructure testing of our team. \newline{} \hspace*{1em}With such efforts, I played a key and leading role in the transition of Team's obligation from \textit{End-to-End testing} to \textit{API/Infrastructure Whitebox testing}. As a result, I was rated above \textbf{4+}/5 on performance reviews in both year 2010 and 2011.}% arguments 3 to 6 are optional
+\cventry{\bfseries 07/2009--Present}{Member of Technical Staff (MTS)}{VMware Inc.}{Beijing}{China}{\textbf{Role}: Technical Lead and Automation Gatekeeper of team}
+\cvitem{Duty}{\textit{Kernel/API/Infrastructure Whitebox} testing and automation. My responsibility mainly contains test specification design, as well as test automation design and implementation.}
+\cvlistitem{Lead the automation design and implementation of 3 whitebox testing projects. They are all delivered on time with decent quality and remarkable code coverage rates.}
+\cvlistitem{Designed team's automation framework on API/Infrastructure whitebox testing.} 
+\cvlistitem{Caught hundreds of product bugs through code analysis and automation testing}
+%\cvlistitem{Built trust with Dev team and Palo Alto counterparts during those projects and contributed much to the establishment of our team's reputation.}
+\cvlistitem{As team's automation gatekeepers, established team's coding standard from scratch, formalized the internal review process, and continuously performed as the internal code reviewer on every team member's code in the past 1.5 years.}
+
+\cvlistitem{Played a key and leading role in the transition of Team's obligation from \textit{End-to-End} testing to \textit{API/Infrastructure Whitebox} testing.}
+\cvlistitem{Was rated above \textbf{4+}/5 on performance reviews in both year 2010 and 2011.}% arguments 3 to 6 are optional
 
 %\vspace*{-0.4em}
 \section{Professional Skills}
 \cvtitlelistitem{Programming}{Versed in \textit{C}, familiar with \textit{ANSI C}; \textit{C} expert in team}
-\cvlistitem{Proficient experience on \textit{GCC}, and \textit{GNU binutils}}
-\cvlistitem{Sound knowledge on \textit{GCC} binary code layout, as well as the \textit{ELF} format}
+%\cvlistitem{Proficient experience on \textit{GCC}, and \textit{GNU binutils}}
+%\cvlistitem{Sound knowledge on \textit{GCC} binary code layout, as well as the \textit{ELF} format}
+\cvlistitem{Proficient  \textit{kernel} programming experiences, including modules and device drivers}
 \cvlistitem{Strong userland/kernel debugging and troubleshooting skills}
-%\cvlistitem{Skillful at \textit{C++/STL}, familiar with \textit{C++ Standards}}
-\cvlistitem{Good at \textit{SCons} and \textit{Makefiles}}
+\cvlistitem{Skillful at \textit{C++/STL}, familiar with \textit{OO programming}}
+%\cvlistitem{Good at \textit{SCons} and \textit{Makefiles}}
 \cvlistitem{Smartly using \textit{Perl}, \textit{SHELL} and tools like \textit{sed/awk}}
-\cvlistitem{Familiar with function programming like \textit{Haskell} etc.}
-\cvtitlelistitem{Environment}{3.5 years \textit{ESX} experience, 2+ years \textit{VMKernel} experience}
-\cvlistitem{More than 7 years development experience under \textit{Linux}, familiar with \textit{SHELL}}
+%\cvlistitem{Familiar with function programming like \textit{Haskell} etc.}
+\cvtitlelistitem{Environment}{More than 7 years development experience under \textit{Linux}, familiar with \textit{SHELL}}
+%\cvlistitem{3.5 years \textit{ESX} experience, 2+ years \textit{VMKernel} experience}
 \cvlistitem{Experienced in cross platform development and porting}
 \cvtitlelistitem{Testing}{3 years API/Infrastructure test experience, including 2 years kernel test experience}
-\cvlistitem{Excel in \textit{C/C++} API/Infrastructure test automation design}
-\cvlistitem{Deeply understand API/Infrastructure testing criteria; familiar with code coverage}
-\cvlistitem{Understand software testing processes well}
-\cvlistitem{Proficient in designing test plans and test specifications}
+\cvlistitem{Proficient in \textit{C/C++} API/Infrastructure test automation design}
+%\cvlistitem{Deeply understand API/Infrastructure testing criteria; familiar with code coverage}
+\cvlistitem{Understand software testing processes well, excel in designing test plans/specifications}
 \cvtitlelistitem{Basis}{Solid basis for algorithm; certain algorithm design and implementing experiences}
 \cvlistitem{Outstanding ability in mathematics, statistics and logical thinking}
 \cvlistitem{Remarkable documents and presentations design skills}
 %\cvlistitem{Read amount of technical books, including: \textit{TAOCP: 1st Volume}, \textit{CRLS}, \textit{TPOP}, \textit{GEB}, \textit{SICP}, \textit{Dragon Book}, etc.}
+
+
+%\vspace*{-0.4em}
+\section{Languages}
+%\cvlanguage{English}{Proficient}{\textbf{CET-6} 541/710, \textbf{TOEFL-IBT} 101/120, Good English Communication Skills.}
+\cvlanguage{English}{Proficient}{\textbf{TOEFL-IBT} 101/120, Good English Communication Skills.}
+%\cvlanguage{Japanese}{Familiar}{Equivalent Ability to \textbf{JPLT}
+%Level 2-3, Basic Reading \& Writing Skills.}
 
 %\cvdoublecomputer{Language}{\textbf{C}}{system level
 %development}{\textbf{Perl}}{enhancing life quality}
@@ -107,21 +123,21 @@
 %tools.}
 
 %\vspace*{-0.4em}
-\section{Project Experience}
+\section{Project Experiences}
 %\subsection{Vocational}
 \cventry{\bfseries 04/2012--Present}{\textit{VMKernel Native Device Driver Model} Testing}{}{}{\textit{VMware}}{\textbf{Platform}: \textit{ESX/VMKernel} and \textit{Linux} \hfill \textbf{Development Languages}: \textit{C/SHELL/SCons}}
 %\cvitem{}{Due to some historical reasons, \textit{VMware}'s start-from-scratch OS the \textit{ESX/VMKernel} supports linux device drivers. A mid-layer called \textit{VMKLinux} was implemented to mimic the linux kernel environment, which servers as a broker between the \textit{VMKernel} and linux drivers. Such a design has serious performance and security drawbacks intrinsically. Finally we decided to embrace our own device driver model as well as device driver APIs which bypasses \textit{VMKLinux} and stands natively on \textit{VMKernel} in this release. By the mean time, we can't just simply throw away all linux drivers in only one release, so this model can also tolerate the original \textit{VMKLinux} model. That is the \textit{Native Driver Model}.}
-\cvitem{}{\textit{Native Driver Model} is a device/driver management model designed particularly for \textit{VMKernel} in this release. For backward compatibility, it is able to co-exist with the previous \textit{VMKLinux} model derived from \textit{Linux}. Mainly this model contains 4 parts: the driver management model, the device management model which supports async event-driven device hotplug/unplug, the device-driver mapping mechanism and the device naming alias mechanism.}
+\cvitem{}{\textit{Native Driver Model} is a device/driver management model designed for \textit{VMKernel}. For backward compatibility, it is able to co-exist with the previous \textit{VMKLinux} model derived from \textit{Linux}. Mainly this model contains 4 parts: a driver management model, a device management model which supports async event-driven device hotplug/unplug, a device-driver mapping mechanism and device naming alias mechanism.}
 %\cvitem{}{\hspace*{1em} There are 4 engineers for testing the whole model. My part is the mapping mechanism and the device naming alias mechanism. For such a purpose, I implemented pseudo PCI and logical devices, plus several dummy testing drivers including both native and \textit{VMKLinux} ones for them as test stubs. Plus a control module which was able to accept userland instructions and then dispatch them to test drivers, control of the construction of test scenarios from userland became pretty straightforward. Totally 60+ test cases are implemented for covering all positive and negative testing scenarios in this way.}
 %\cvitem{}{\hspace*{1em}Some other test cases were automated through a Virtual Machine with Virtual PCI devices like \textit{vmxnet3} NIC cards and \textit{pvscsi} HBA adapters since we need to verify some model behaviors which will only happen at system booting stage. I also proposed several dummy test drivers for those virtual PCI devices.} \cvitem{}{\hspace*{1em}During this project, I went deep into both the native driver model as well as the \textit{VMKLinux} world, and through comparison of the two, I learned a lot on device and driver management.}
 \cvitem{Objective}{Test the functionality of this model, including both API Whitebox and scenario testing.}
-\cvitem{Achieved}{4 engineers in total. My part is the mapping mechanism and device naming alias.}
+\cvitem{Achieved}{4 engineers in total. My part is tests of mapping mechanism and device naming alias.}
 \cvlistitem{Pseudo PCI and logical devices, plus several dummy testing drivers both native and \textit{VMKLinux} for them as test stubs;}
 \cvlistitem{Control module which was able to accept userland instructions and dispatch them to test drivers, for controlling  the construction of test scenarios from userland;}
 \cvlistitem{A \textit{test-in-vm} approach for verifying certain model behaviors which will only happen at system booting stage, where virtual machine with Virtual PCI devices like \textit{vmxnet3} NIC cards and \textit{pvscsi} HBA adapters was employed as the testbed;}
 \cvlistitem{Totally 60+ test cases are implemented for covering all positive and negative testing scenarios of the device-driver mapping mechanism}
 
-\vspace{.2em}
+\vspace{.4em}
 \cventry{\bfseries 04/2011--03/2012}{\textit{VMKernel Sysinfo Interface (VSI)} API Testing}{}{}{\textit{VMware}}{\textbf{Platform}: \textit{ESX/VMKernel} \hfill \textbf{Development Languages}: \textit{C/SHELL/SCons}}
 \cvitem{}{\textit{VSI} is an interface between the \textit{VMKernel} and userland. It serves a similar purpose to \textit{procfs} on unix, but is more structured: all data is typed, enumerated, fixed size and statically defined at compile time.}
 %\cvitem{}{\hspace*{1em}Essentially there are 2 differences for security and performance considerations comparing to procfs. First, instead of procfs' file ops kind userland interface, VSI provides userland C library interfaces a.k.a vsiCalls which is able to accept more structured data a.k.a vsiParams. So that validation of data input can be done in userland in advance where you can play safer with better performance. Second, VSI manages user implemented kernel level callbacks in VSI nodes and organize them in a tree-like structure, the layout of which can be statically determined at compiling stage. The tree is then statically linked to both kernel and the userland library, through which you can easily traverse the tree without touch kernel in a much faster manner. Beside that, VSI also provides various kinds of VSI Node prototypes for kernel/module developers, including plain leaf node, branch node, self-expandable branch node, and self-expandable leaf node etc.} 
@@ -130,7 +146,7 @@
 %\cvitem{}{\hspace*{1em} Except that, I also designed a memory checker for the VSI userland library. This checker is capable of detecting memory issues like memory leaks and duplicate free with little overhead. It can provide proficient runtime context for debugging convenience when hitting such issues, including detailed info of the memory chunk, the allocator, and backstrace info. As a result, this memory checker caught 2 memory leak bugs of VSI.}
 \cvitem{Objective}{Verify the functionality and robustness of the overall \textit{VSI} infrastructure.}
 \cvitem{}{\textbf{Functionality} - test whether userland input can be delivered correctly through \textit{VSI} to the target kernel land handler}
-\cvitem{}{\textbf{Robustness} - test all kinds of malicious inputs can be handled gracefully by those \textit{VSI} APIs}
+\cvitem{}{\textbf{Robustness} - test \textit{VSI} APIs can handle all kinds of malicious inputs gracefully}
 \cvitem{Achieved}{3 engineers on this project. I am the main test automation designer.}
 \cvlistitem{Designed a handy testing framework based on \textit{CUnit} which was then employed to be the standard testing framework to our whole team;}
 \cvlistitem{A simple but powerful verification approach, which have only 5 kernel handlers plus less than 10 \textit{VSI} nodes implemented in no more than 200 line \textit{C} codes, but powerful enough for supporting our test on all types of \textit{VSI} nodes and \textit{VSI} APIs;}
@@ -138,14 +154,17 @@
 \cvlistitem{Team implemented about 300 test cases, 130 from me, through which we caught tens of critical bugs except for minor ones;}
 \cvlistitem{Our test covered >90\% meaningful code paths of target \textit{VSI} APIs.}
 
-\vspace{.2em}
+\vspace{.4em}
 \cventry{\bfseries 04/2010--03/2011}{\textit{ESXCLI} API and Infrastructure Testing}{}{}{\textit{VMware}}{\textbf{Platform}: \textit{ESX} \hfill \textbf{Development Languages}: \textit{C++/XML/SHELL/SCons}}
-\cvitem{}{\textit{ESXCLI} is an unified command line tool for \textit{ESX} management purpose. %Previously, there exist several standalone configuration tools for ESX which are implemented in various languages by different teams with uncontrollable quality. Then ESXCLI is proposed as a synthesized tool to replace all of them.
-It is designed in an infrastructure/plugin fashion. Where plugin claim namespace, implement real management logics and register them as commands of the namespace into the infrastructure. While infrastructure manages namespaces/commands and provides an uniform way of launching them. A plugins could be \textit{C/C++} shared library %which implement infrastructure defined callbacks and do input/output using defined data structures. They 
-which will be loaded with \textit{dlopen()} dynamically at runtime. It can also be an executable binary or script with \textit{XML} manifest, % which describes its parameters/outputs/namespaces/commands/executions in the syntax defined by infrastructure. Those manifests will be loaded by the infrastructure which will then 
-through which infrastructure could be able to know how to process its input/output uniformly and how to execute.}
-%\cvitem{}{\hspace*{1em} We test the infrastructure. Our testing objective can be split to 2 parts. First APIs and data structures provided to plugins should be functionally right and reliable. Second, the infrastructure itself should be robust enough so that no malformed plugin can break it. We implemented about 240 test cases in total for this project, plus tens of native plugins and more than 100 XML plugins. With them, we caught more than 100 bugs of this product which expand from critical design defects to usability issues. That demonstrated the power and value of our testing. Our test achieved remarkable code coverage rate which is >95\%.}
-%\cvitem{}{\hspace*{1em} There are 2 engineers on this project. I implemented 80\% of all test automations. At the early stage of this project, by only reading the source code, I found a critical issue on the design of this infrastructure, which finally made the implementer refactor his code. I also caught a code injection issue of the XML plugin that due to some escape characters were not handled correctly, it could break into shell and run arbitrary code. Due to my outstanding performance, on this project, I was even invited by the implementer to help fixing product bugs.}
+\cvitem{}{\textit{ESXCLI} is an unified command line tool for \textit{ESX} management purpose. %%Previously, there exist several standalone configuration tools for ESX which are implemented in various languages by different teams with uncontrollable quality. Then ESXCLI is proposed as a synthesized tool to replace all of them.
+It is designed in an infrastructure/plugin fashion. %Where plugin claim namespace, implement real management logics and register them as commands of the namespace into the infrastructure. While infrastructure manages namespaces/commands and provides an uniform way of launching them. A plugins could be \textit{C/C++} shared library 
+%%which implement infrastructure defined callbacks and do input/output using defined data structures. They 
+%which will be loaded with \textit{dlopen()} dynamically at runtime. It can also be an executable binary or script with \textit{XML} manifest, 
+%% which describes its parameters/outputs/namespaces/commands/executions in the syntax defined by infrastructure. Those manifests will be loaded by the infrastructure which will then 
+%through which infrastructure could be able to know how to process its input/output uniformly and how to execute.
+}
+%%\cvitem{}{\hspace*{1em} We test the infrastructure. Our testing objective can be split to 2 parts. First APIs and data structures provided to plugins should be functionally right and reliable. Second, the infrastructure itself should be robust enough so that no malformed plugin can break it. We implemented about 240 test cases in total for this project, plus tens of native plugins and more than 100 XML plugins. With them, we caught more than 100 bugs of this product which expand from critical design defects to usability issues. That demonstrated the power and value of our testing. Our test achieved remarkable code coverage rate which is >95\%.}
+%%\cvitem{}{\hspace*{1em} There are 2 engineers on this project. I implemented 80\% of all test automations. At the early stage of this project, by only reading the source code, I found a critical issue on the design of this infrastructure, which finally made the implementer refactor his code. I also caught a code injection issue of the XML plugin that due to some escape characters were not handled correctly, it could break into shell and run arbitrary code. Due to my outstanding performance, on this project, I was even invited by the implementer to help fixing product bugs.}
 \cvitem{Objective}{We test the infrastructure. Our testing objective can be split to 2 parts.}
 \cvitem{}{(a). APIs/data structures provided to plugins should be functionally right and reliable}
 \cvitem{}{(b). Infrastructure should be robust enough so that no malformed plugin can break it}
@@ -162,15 +181,16 @@ through which infrastructure could be able to know how to process its input/outp
 %\cventry{03/2008--04/2008}{On-line Human Reappearance Detection}{}{Research Project}{}{This is the researh project for my paper \cite{publication1}. This paper proposed to find reappearances under single camera view. We extracted color, shape and local features of people for learning human models. On-line boosting was employed as the learning algorithm, which is one of our main contributions in this paper. This project contains >6,000 lines of code, all wrote by myself.}
 %\cventry{10/2007--12/2007}{Abnormal Event Detection System}{}{}{}{This project is designed for detecting abormal events, e.g. bag-dumping behavior. It is implemented based on the \textit{OpenCV} library for preprocessing. My original work focused on behavior analysis. This system was firstly developed on \textit{Windows}, and then was transplanted to \textit{Linux} with \textit{GTK} which provided a friendly and platform independent \textit{GUI}.}
 %\cventry{06/2007--07/2007}{\textit{JPLT}, \textit{TOEFL} Test Register}{}{}{}{Booking a test position of \textit{JPLT} or \textit{TOEFL} is difficult. That's why I use scripts to automatically login these websites, query free positions and register one if available. Also I wrote a simple \textit{GUI} using \textit{Perl/TK}, and put it on internet. This is not a big work, but it helped a lot of people.}
-\vspace{.2em}
+\vspace{.4em}
 \cventry{\bfseries 10/2006--12/2006}{A \textit{VOS} Style Music Game}{}{}{}{\textbf{Platform}: \textit{Linux} \hfill \textbf{Development Languages}: \textit{C/Makefile}}
-\cvitem{}{This project came from music games we love like \textit{VOS} and \textit{O2Jam}. We are music game fans. We want to create our own music games. Unfortunately the game is not finished at last. The UI part is hard for us. But we are proud of what we had finished.}
+\cvitem{}{This project came from music games we love like \textit{VOS} and \textit{O2Jam}. We are music game fans. We want to create our own music games. %Unfortunately the game is not finished at last. The UI part is hard for us. But we are proud of what we had finished.
+}
 \cvitem{Objective}{Our goal is to create a robust and fast music game, which is compatible with all music game file formats.}
 %\cvitem{}{\hspace*{1em}We first completed a midi parser for MIDI, RIFF and RMI formats, then tested it on >200,000 files. It's proved to be faster and more stable than any existed parsers, even the one in \textit{Sonar} or \textit{Cubase}. Second, we wrote . We also designed a 3D UI engine based on \textit{OpenGL}. Unfortunately the UI wasn't completed, but we are proud of what we had finished. The team has 2 members.}
 \cvitem{Achieved}{2 members. The other one is my classmate.}
-\cvlistitem{A midi parser for MIDI, RIFF and RMI formats. Tested it on >200,000 files. It's proved to be faster and more stable than any existed parsers, even those ones in professional midi editing softwares like \textit{Sonar} or \textit{Cubase};}
-\cvlistitem{A parser to convert all game file formats to a plain format we designed for simplicity and efficiency;}
-\cvlistitem{A 3D UI engine which wrapped \textit{OpenGL} into \textit{C++} classes.}
+\cvlistitem{A midi parser and player for MIDI, RIFF and RMI formats. Tested it on >200,000 files. It's proved to be faster and more stable than any existed parsers, even those ones in professional midi editing softwares like \textit{Sonar} or \textit{Cubase};}
+\cvlistitem{A parser to convert all game file formats to a plain format we designed for simplicity and efficiency.}
+%\cvlistitem{A 3D UI engine which wrapped \textit{OpenGL} into \textit{C++} classes.}
 %\cventry{03/2006--06/2006}{Web Services System for Predicting Protein Functional Sites}{}{Bachelor Thesis}{}{This project aimed at providing integrated web service for \textit{PFS} prediction and demonstrating approaches of the lab. Given protein sequences from users, the system automatically collect, parse and restructure related adjacent information from open web databases for computing. It was implemented using \textit{Perl} under the guide of a senior Ph.D. candidate.}
 %\cventry{09/2005--11/2005}{A Simulator of \textit{Wireless Sensor Networks}}{}{}{}{We simulated the Physics Layer and Data-link Layer of \textit{Wireless Sensor Networks (WSN)} for providing a evaluation platform of \textit{WSN} protocols and algorithms. This project won the third-class prize of \textit{HuaWei Cup} software contest. There are 3 of us with the same workload.}
 %\cventry{07/2005--09/2005}{Metabolic Pathway Modeling}{}{Undergraduate Research Program}{}{Our aim is to imitate \textit{13CFLUX}, which is a bussiness software used to solve the Metabolic Pathway Flux Functions. We designed effective algorithms for high-dimentional sparse matrix operations. We also employ \textit{Generic Algorithm} instead of numerical methods for reliably finding global optimal solutions. Our group have 3 members, and I am the main contributor.}
@@ -182,12 +202,6 @@ through which infrastructure could be able to know how to process its input/outp
 \bibliography{publications}       % 'publications' is the name of a BibTeX file
 %\vspace{1.2em}
 
-%\vspace*{-0.4em}
-\section{Languages}
-%\cvlanguage{English}{Proficient}{\textbf{CET-6} 541/710, \textbf{TOEFL-IBT} 101/120, Good English Communication Skills.}
-\cvlanguage{English}{Proficient}{\textbf{TOEFL-IBT} 101/120, Good English Communication Skills.}
-%\cvlanguage{Japanese}{Familiar}{Equivalent Ability to \textbf{JPLT}
-%Level 2-3, Basic Reading \& Writing Skills.}
 
 %\vspace*{-0.4em}
 \section{Honors and Awards}
@@ -198,7 +212,7 @@ through which infrastructure could be able to know how to process its input/outp
 %\cvlistitem{~Third-class Prize of \textit{HuaWei Cup} Software Contest, 2005}
 
 %\vspace*{-0.4em}
-\section{Self Evaluation}
+\section{Profile}
 \cvitem{\bfseries Keywords}{\large Smart, fun of techniques, dedicated, honest, idealistic, good team spirit}
 \cvitem{\bfseries Hobbies}{\large Soccer, Reading, Philosophy, Sci-Fi and Fantasy}
 
